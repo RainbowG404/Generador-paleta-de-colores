@@ -1,3 +1,54 @@
+// Obtener referencia al tutorial y botones
+const tutorial = document.getElementById('tutorial');
+const siguienteBtn = document.getElementById('siguienteBtn');
+const omitirBtn = document.getElementById('omitirBtn');
+
+// Definir los mensajes del tutorial
+const mensajes = [
+    "Bienvenido al Generador de Paletas de Colores. Aquí puedes crear paletas de colores armoniosas para tus proyectos.",
+    "Selecciona un color base utilizando el selector de color en la parte superior de la página.",
+    "Ajusta la saturación y luminosidad del color utilizando los controles deslizantes debajo del selector de color.",
+    "¡Explora los colores generados en la paleta central! Haz clic derecho en cualquier color para copiar su código hexadecimal.",
+    "¡Diviértete creando tu paleta de colores perfecta!"
+];
+
+// Función para mostrar el mensaje actual del tutorial
+let indiceMensaje = 0;
+function mostrarMensaje() {
+    tutorial.innerHTML = `
+        <h2>Paso ${indiceMensaje + 1}</h2>
+        <p>${mensajes[indiceMensaje]}</p>
+        <button id="siguienteBtn">Siguiente</button>
+        <button id="omitirBtn">Omitir</button>
+    `;
+    // Obtener referencia a los botones después de recrearlos
+    const siguienteBtn = document.getElementById('siguienteBtn');
+    const omitirBtn = document.getElementById('omitirBtn');
+
+    // Agregar evento de clic al botón siguiente
+    siguienteBtn.addEventListener('click', siguientePaso);
+
+    // Agregar evento de clic al botón omitir
+    omitirBtn.addEventListener('click', omitirTutorial);
+}
+
+// Función para avanzar al siguiente paso del tutorial
+function siguientePaso() {
+    indiceMensaje++;
+    if (indiceMensaje < mensajes.length) {
+        mostrarMensaje();
+    } else {
+        // Ocultar el tutorial al llegar al final
+        tutorial.style.display = 'none';
+    }
+}
+
+// Función para omitir el tutorial
+function omitirTutorial() {
+    // Ocultar el tutorial al hacer clic en omitir
+    tutorial.style.display = 'none';
+}
+
 // Función para generar paleta de colores
 function generarPaleta() {
     // Obtener los valores de los controles (colores base, saturación, luminosidad, etc.)
@@ -82,4 +133,5 @@ window.onload = function() {
     colorBaseControl.addEventListener('change', handleColorBaseChange);
 
     generarPaleta();
+    mostrarMensaje();
 };

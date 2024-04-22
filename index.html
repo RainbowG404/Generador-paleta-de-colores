@@ -17,10 +17,10 @@
         <div class="controls">
             <!-- Controles para seleccionar colores base, ajustar saturación y luminosidad, etc. -->
 
-            <label for="colorBase">Color Base:</label>
+            <label for="colorBase">Color Base:</label><br><br>
             <input type="color" id="colorBase" value="#ff0000">
             <!-- Input de tipo color para seleccionar el color base -->
-
+            <br><br>
             <label for="saturacion">Saturación:</label>
             <input type="range" id="saturacion" min="0" max="2" step="0.1" value="1">
             <!-- Input de tipo rango para ajustar la saturación -->
@@ -34,6 +34,15 @@
             <!-- Aquí se mostrará la paleta de colores generada -->
         </div>
     </div>
+
+    <!-- Tutorial -->
+    <div id="tutorial" class="tutorial">
+        <h2>Bienvenido al Tutorial</h2>
+        <p>¡Este tutorial te guiará a través de las distintas secciones de la aplicación!</p>
+        <button id="siguienteBtn">Siguiente</button>
+        <button id="omitirBtn">Omitir</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
