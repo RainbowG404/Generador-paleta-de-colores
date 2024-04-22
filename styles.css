@@ -1,1 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
 
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.controls {
+    margin-bottom: 20px;
+    /* Estilos para los controles de selección de colores, saturación, luminosidad, etc. */
+}
+
+.palette {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Estilos para la visualización de la paleta de colores generada */
+}
+
+.color-box {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    /* Estilos para cada caja de color en la paleta */
+}

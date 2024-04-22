@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Paletas de Colores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Generador de Paletas de Colores</h1>
+        <!-- Aquí vamos a colocar los controles y la visualización de la paleta de colores -->
+        <div class="controls">
+            <!-- Controles para seleccionar colores base, ajustar saturación y luminosidad, etc. -->
+
+            <label for="colorBase">Color Base:</label>
+            <input type="color" id="colorBase" value="#ff0000">
+            <!-- Input de tipo color para seleccionar el color base -->
+
+            <label for="saturacion">Saturación:</label>
+            <input type="range" id="saturacion" min="0" max="2" step="0.1" value="1">
+            <!-- Input de tipo rango para ajustar la saturación -->
+
+            <label for="luminosidad">Luminosidad:</label>
+            <input type="range" id="luminosidad" min="0" max="1" step="0.1" value="0.5">
+            <!-- Input de tipo rango para ajustar la luminosidad -->
+
+        </div>
+        <div class="palette">
+            <!-- Aquí se mostrará la paleta de colores generada -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
