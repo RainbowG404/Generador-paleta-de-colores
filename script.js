@@ -5,9 +5,9 @@ const omitirBtn = document.getElementById('omitirBtn');
 
 // Definir los mensajes del tutorial
 const mensajes = [
-    "Bienvenido al Generador de Paletas de Colores. Aquí puedes crear paletas de colores armoniosas para tus proyectos.",
-    "Selecciona un color base utilizando el selector de color en la parte superior de la página.",
-    "Ajusta la saturación y luminosidad del color utilizando los controles deslizantes debajo del selector de color.",
+    "Si no conoces como utilizar la herramienta puedes continuar con el tutorial, u omitirlo en caso de que no lo necesites.",
+    "En la parte superior de la página, encontrarás un selector de color que te permite elegir el color base para tu paleta. Haz clic en él y selecciona el color que más te guste.",
+    "Debajo del selector de color base, verás dos controles deslizantes. El primero te permite ajustar la saturación del color, mientras que el segundo controla la luminosidad. Desliza los controles para modificar estos atributos y ver cómo afectan a tu paleta.",
     "¡Explora los colores generados en la paleta central! Haz clic derecho en cualquier color para copiar su código hexadecimal.",
     "¡Diviértete creando tu paleta de colores perfecta!"
 ];
@@ -15,12 +15,20 @@ const mensajes = [
 // Función para mostrar el mensaje actual del tutorial
 let indiceMensaje = 0;
 function mostrarMensaje() {
+    let titulo;
+    if (indiceMensaje === 0) {
+        titulo = "Bienvenido al Generador de Paletas de Colores";
+    } else {
+        titulo = `Paso ${indiceMensaje}`;
+    }
+
     tutorial.innerHTML = `
-        <h2>Paso ${indiceMensaje + 1}</h2>
+        <h2>${titulo}</h2>
         <p>${mensajes[indiceMensaje]}</p>
         <button id="siguienteBtn">Siguiente</button>
         <button id="omitirBtn">Omitir</button>
     `;
+    
     // Obtener referencia a los botones después de recrearlos
     const siguienteBtn = document.getElementById('siguienteBtn');
     const omitirBtn = document.getElementById('omitirBtn');

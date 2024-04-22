@@ -14,9 +14,13 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.container p {
+    text-align: center;
+}
+
 h1 {
     text-align: center;
-    color: #333;
+    color: #a65999;
 }
 
 .controls {
@@ -51,11 +55,11 @@ input[type="color"] {
 
 .tutorial {
     position: fixed;
-    bottom: 30%;
+    bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
     background-color: #fff;
-    border: 2px solid #007bff;
+    border: 2px solid #8c7387;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -67,7 +71,7 @@ input[type="color"] {
 .tutorial h2 {
     margin-top: 0;
     margin-bottom: 10px;
-    color: #007bff;
+    color: #8c7387;
 }
 
 .tutorial p {
@@ -76,7 +80,7 @@ input[type="color"] {
 }
 
 .tutorial button {
-    background-color: #007bff;
+    background-color: #8c7387;
     color: #fff;
     border: none;
     padding: 10px 20px;
