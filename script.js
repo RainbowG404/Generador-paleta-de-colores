@@ -1,3 +1,9 @@
+/********************************************************************** 
+** Autor: JazmínGrez
+** Año: 2024
+** Este script brinda funcionalidad al generador de paletas de colores.
+***********************************************************************/
+
 // Obtener referencia al tutorial y botones
 const tutorial = document.getElementById('tutorial');
 const siguienteBtn = document.getElementById('siguienteBtn');

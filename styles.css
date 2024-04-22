@@ -26,16 +26,15 @@ h1 {
 .controls {
     margin-bottom: 20px;
     text-align: center;
-    /* Estilos para los controles de selección de colores, saturación, luminosidad, etc. */
 }
 
 input[type="color"] {
     /* Hacer que el selector de color sea cuadrado */
-    width: 40px; /* Ancho del cuadrado */
-    height: 40px; /* Alto del cuadrado */
+    width: 40px; 
+    height: 40px; 
     border-radius: 5px;
-    padding: 0; /* Quitar padding */
-    margin: 0; /* Quitar margen */
+    padding: 0; 
+    margin: 0;
 }
 
 .palette {
@@ -66,6 +65,7 @@ input[type="color"] {
     width: 80%;
     max-width: 400px;
     text-align: center;
+    /* Estilos para la caja del tutorial */
 }
 
 .tutorial h2 {
